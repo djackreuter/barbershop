@@ -4,32 +4,32 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
-{
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        });
-    }
+class CreateUsersTable extends Migration {
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up() {
+		Schema::create('users', function (Blueprint $table) {
+			$table->increments('userId');
+			$table->integer('userBarbershopId')->unsigned();
+			$table->string('userName', 50);
+			$table->string('userEmail', 128);
+			$table->string('userHash', 128)->nullable();
+			$table->string('userSalt', 64)->nullable();
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('users');
-    }
+			$table->unique('email');
+			$table->index('userBarbershopId');
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down() {
+		Schema::dropIfExists('users');
+	}
 }
