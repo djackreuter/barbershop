@@ -6,6 +6,10 @@
         <title>Users</title>
     </head>
     <body>
-        <h1>{{ $user->userName }}</h1>
+        <ul>
+                <li>User Id: {{ $user->id }}</li>
+                <li>User Name: {{ $user->userName }}</li>
+                <li>User Email: {{ $user->userEmail }}</li>
+        </ul>
     </body>
 </html>

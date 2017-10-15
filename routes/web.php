@@ -19,7 +19,7 @@ Route::get('/users', function () {
 
 });
 
-Route::get('/users/{id}', function ($id) {
+Route::get('/users/{userId}', function ($id) {
 
 	$user = DB::table('users')->find($id);
 

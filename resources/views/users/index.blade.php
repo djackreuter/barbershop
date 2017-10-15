@@ -8,9 +8,11 @@
     <body>
         <ul>
             @foreach ($users as $user)
-                <li>{{ $user->id }}</li>
-                <li>{{ $user->userName }}</li>
-                <li>{{ $user->userEmail }}</li>
+                <li>
+                    <a href="/users/{{ $user->id }}">
+                        {{ $user->userName }}
+                    </a>
+                </li>
             @endforeach
         </ul>
     </body>
