@@ -7,9 +7,11 @@
     </head>
     <body>
         <ul>
-			  @foreach ($tasks as $task)
-            <li>{{ $task }}</li>
-			  @endforeach
+            @foreach ($users as $user)
+                <li>{{ $user->userId }}</li>
+                <li>{{ $user->userName }}</li>
+                <li>{{ $user->userEmail }}</li>
+            @endforeach
         </ul>
     </body>
 </html>

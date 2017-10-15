@@ -8,7 +8,7 @@
     <body>
         <ul>
             @foreach ($users as $user)
-                <li>{{ $user->userId }}</li>
+                <li>{{ $user->id }}</li>
                 <li>{{ $user->userName }}</li>
                 <li>{{ $user->userEmail }}</li>
             @endforeach

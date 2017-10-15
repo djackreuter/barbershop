@@ -6,10 +6,6 @@
         <title>Users</title>
     </head>
     <body>
-        <ul>
-            @foreach ($user as $users)
-                <li>{{ $users->userName }}</li>
-            @endforeach
-        </ul>
+        <h1>{{ $user->userName }}</h1>
     </body>
 </html>
