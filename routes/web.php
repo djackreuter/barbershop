@@ -11,14 +11,19 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/users', function () {
 
-	$tasks = [
-		'Go to the store',
-		'Book flight',
-		'Code'
-	];
-	return view('welcome', compact('tasks'));
+	$users = DB::table('users')->get();
+
+	return view('users.index', compact('users'));
+
+});
+
+Route::get('/users/{id}', function ($id) {
+
+	$user = DB::table('users')->find($id);
+
+	return view('users.show', compact('user'));
 
 });
 
