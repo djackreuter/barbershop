@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration {
 			$table->string('userHash', 128)->nullable();
 			$table->string('userSalt', 64)->nullable();
 
-			$table->unique('email');
+			$table->unique('userEmail');
 			$table->index('userBarbershopId');
 		});
 	}
