@@ -1,19 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Users;
 
 Route::get('/users', function () {
 
-	$users = DB::table('users')->get();
+	// query builder
+	//	$users = DB::table('users')->get();
+
+	// eloquent
+	$users = Users::all();
 
 	return view('users.index', compact('users'));
 
@@ -21,12 +16,14 @@ Route::get('/users', function () {
 
 Route::get('/users/{userId}', function ($id) {
 
-	$user = DB::table('users')->find($id);
+//	$user = DB::table('users')->find($id);
+
+	$user = Users::find($id);
 
 	return view('users.show', compact('user'));
 
 });
 
-Route::get('/about', function() {
+Route::get('/about', function () {
 	return view('about');
 });
