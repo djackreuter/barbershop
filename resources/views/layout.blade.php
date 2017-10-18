@@ -23,6 +23,7 @@
         <title>Barbershop App</title>
     </head>
     <body>
+        @include('layouts.nav')
         <div class="container">
             <div class="row">
                 <div class="col">
