@@ -28,8 +28,15 @@
             <div class="row">
                 <div class="col">
                     @yield('content')
-                </div>
-            </div>
-        </div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    @include('layouts.footer')
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
     </body>
 </html>
