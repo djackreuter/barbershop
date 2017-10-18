@@ -2,7 +2,7 @@
 
 Route::get('/users', 'UsersController@index');
 
-Route::get('/users/{id}', 'UsersController@show');
+Route::get('/users/{user}', 'UsersController@show');
 
 
 
