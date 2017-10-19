@@ -2,7 +2,7 @@
 
 @section('home')
     <div class="container">
-        <h1>Welcome to the Barbershop App</h1>
+        <h1>Welcome to the Barbershop App!</h1>
     </div><!-- /.container -->
     <div class="container">
         <div class="row">

@@ -24,14 +24,17 @@
     </head>
     <body>
         @include('layouts.nav')
+
             @yield('home')
-        {{--<div class="container">--}}
-            {{--<div class="row">--}}
-                {{--<div class="col">--}}
-                    {{--@yield('content')--}}
-                {{--</div><!-- /.col -->--}}
-            {{--</div><!-- /.row -->--}}
-        {{--</div><!-- /.container -->--}}
+
+        <!-- loads users view -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    @yield('content')
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
 
         <!-- footer section -->
         <footer>
