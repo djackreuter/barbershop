@@ -23,11 +23,13 @@
         <title>Barbershop App</title>
     </head>
     <body>
-        @include('layouts.nav')
+        <!-- navbar -->
+    @include('layouts.nav')
 
-            @yield('home')
+    <!-- homepage -->
+    @yield('home')
 
-        <!-- loads users view -->
+    <!-- loads users view -->
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -36,15 +38,7 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
 
-        <!-- footer section -->
-        <footer>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        @include('layouts.footer')
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </footer>
+        <!-- footer -->
+        @include('layouts.footer')
     </body>
 </html>
