@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'UsersController@index');
+Route::get('/', 'HomeController@home');
 
 Route::get('/users', 'UsersController@index');
 
