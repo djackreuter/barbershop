@@ -38,6 +38,15 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
 
+        <!-- loads barbershop view -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    @yield('barbershop')
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+
         <!-- footer -->
         @include('layouts.footer')
     </body>
