@@ -4,6 +4,6 @@ namespace App\Http\Controllers;
 
 class HomeController extends Controller {
 	public function home() {
-		return view('layouts.home');
+		return view('home');
 	}
 }

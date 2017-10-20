@@ -6,8 +6,8 @@ use App\Barbershop;
 
 class BarbershopController extends Controller {
 	public function index() {
-		$barbershops = Barbershop::all();
+		$barbershop = Barbershop::all();
 
-		return view('barbershop.index', compact('barbershops'));
+		return view('barbershop.index', compact('barbershop'));
 	}
 }
