@@ -10,4 +10,9 @@ class BarbershopController extends Controller {
 
 		return view('barbershop.index', compact('barbershop'));
 	}
+
+	public function show(Barbershop $barbershop) {
+
+		return view('barbershop.show', compact('barbershop'));
+	}
 }
