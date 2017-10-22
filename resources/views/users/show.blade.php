@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
+@include('layouts.head')
 
-        <title>Users</title>
-    </head>
-    <body>
+@include('layouts.nav')
         <ul>
                 <li>User Id: {{ $user->id }}</li>
                 <li>User Name: {{ $user->userName }}</li>
                 <li>User Email: {{ $user->userEmail }}</li>
         </ul>
-    </body>
-</html>
+
+@include('layouts.footer')
