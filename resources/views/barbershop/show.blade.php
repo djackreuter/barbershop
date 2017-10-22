@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Barbers</title>
-    </head>
+<html>
+    @include('layouts.head')
     <body>
+        @include('layouts.nav')
         <ul>
             <li>Barbershop: {{ $barbershop->barbershopName }}</li>
             <li>About Us: {{ $barbershop->barbershopBio }}</li>
         </ul>
+        @include('layouts.footer')
     </body>
 </html>

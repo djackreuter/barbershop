@@ -1,10 +1,13 @@
-@include('layouts.head')
-
-@include('layouts.nav')
+<!DOCTYPE html>
+<html>
+    @include('layouts.head')
+    <body>
+        @include('layouts.nav')
         <ul>
-                <li>User Id: {{ $user->id }}</li>
-                <li>User Name: {{ $user->userName }}</li>
-                <li>User Email: {{ $user->userEmail }}</li>
+            <li>User Id: {{ $user->id }}</li>
+            <li>User Name: {{ $user->userName }}</li>
+            <li>User Email: {{ $user->userEmail }}</li>
         </ul>
-
-@include('layouts.footer')
+        @include('layouts.footer')
+    </body>
+</html>
