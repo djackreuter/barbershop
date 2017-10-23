@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    @yield('content')
+                    @yield('users')
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container -->
