@@ -15,4 +15,8 @@ class BarbershopController extends Controller {
 
 		return view('barbershop.show', compact('barbershop'));
 	}
+
+	public function appt() {
+		return view('barbershop.appt');
+	}
 }

@@ -11,3 +11,5 @@ Route::get('/users/{user}', 'UsersController@show');
 Route::get('/barbershops', 'BarbershopController@index');
 
 Route::get('/barbershops/{barbershop}', 'BarbershopController@show');
+
+Route::get('/barbershops/appt', 'BarbershopController@appt');
