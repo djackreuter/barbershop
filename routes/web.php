@@ -10,6 +10,6 @@ Route::get('/users/{user}', 'UsersController@show');
 // barbershop routes
 Route::resource('/barbershops', 'BarbershopController');
 
-Route::get('/barbershops/{barbershop}', 'BarbershopController@show');
+Route::resource('/barbershops/{barbershops}', 'BarbershopController');
 
 Route::get('/barbershops/appt', 'BarbershopController@appt');

@@ -4,10 +4,10 @@
     <h1>Barbershops</h1>
 
     <ul>
-        @foreach($barbershop as $barbershops)
+        @foreach($barbershops as $barbershop)
             <li>
-                <a href="/barbershops/{{ $barbershops->id }}">
-                    {{ $barbershops->barbershopName }}
+                <a href="/barbershops/{{ $barbershop->id }}">
+                    {{ $barbershop->barbershopName }}
                 </a>
             </li>
         @endforeach

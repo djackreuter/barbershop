@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Barbershop;
 
 class BarbershopController extends Controller
@@ -13,9 +13,9 @@ class BarbershopController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $barbershop = Barbershop::all();
+        $barbershops = Barbershop::all();
 
-        return view ('barbershop.index', compact('barbershop'));
+        return view('barbershop.index', compact('barbershops'));
     }
 
     /**
@@ -45,9 +45,10 @@ class BarbershopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($id) {
+        $barbershop = Barbershop::find($id);
+
+        return view('barbershop.show', compact('barbershop'));
     }
 
     /**
