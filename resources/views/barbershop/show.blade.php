@@ -12,9 +12,9 @@
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" aria-describedby="nameHelp"
                    placeholder="Name..." required>
-            <div class="invalid-feedback">
-                Please enter your name.
-            </div>
+            {{--<div class="invalid-feedback">--}}
+                {{--Please enter your name.--}}
+            {{--</div>--}}
         </div>
         <!-- appt time selector -->
         <div class="form-group">
