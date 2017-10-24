@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBarbershopTable extends Migration {
+class CreateApptsTable extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -12,12 +13,10 @@ class CreateBarbershopTable extends Migration {
      */
     public function up()
     {
-        Schema::create('barbershops', function (Blueprint $table) {
+        Schema::create('appts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('barbershopBio', 500)->nullable();
-            $table->string('barbershopName', 128);
-            $table->string('barbershopHash', 128)->nullable();
-            $table->string('barbershopSalt', 64)->nullable();
+            $table->string('apptCustomerName', 128);
+            $table->dateTime('apptDateTime');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateBarbershopTable extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('barbershop');
+        Schema::dropIfExists('appts');
     }
 }
