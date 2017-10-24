@@ -18,13 +18,20 @@
         </div>
         <!-- appt time selector -->
         <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+            <label for="exampleFormControlSelect2">Choose an appointment time</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2" required>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
             </select>
         </div>
         <!-- haircut or haircut & shampoo -->

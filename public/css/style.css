@@ -10,3 +10,7 @@ footer .container-fluid {
 footer p {
 	margin: 1rem 0;
 }
+
+nav {
+	margin-bottom: 1rem;
+}
