@@ -34,7 +34,11 @@ class BarbershopController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        // create a new appointment using the request data
+          dd(request()->all());
+        // save to database
+
+        // redirect back to barbershop info page
     }
 
     /**
