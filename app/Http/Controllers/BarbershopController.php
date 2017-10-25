@@ -23,9 +23,8 @@ class BarbershopController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create() {
+        return view('barbershop.create');
     }
 
     /**
