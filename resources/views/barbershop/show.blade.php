@@ -7,10 +7,10 @@
 
     <h4>Schedule An Appointment</h4>
 
-    <form id="needs-validation" novalidate>
+    <form id="needs-validation" method="post" action="/appt" novalidate>
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="nameHelp"
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp"
                    placeholder="Name..." required>
             {{--<div class="invalid-feedback">--}}
                 {{--Please enter your name.--}}
@@ -18,8 +18,8 @@
         </div>
         <!-- appt time selector -->
         <div class="form-group">
-            <label for="exampleFormControlSelect2">Choose an appointment time</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2" required>
+            <label for="exampleFormControlSelect2">Choose an appointment time:</label>
+            <select multiple class="form-control" name="appt" required>
                 <option>09:00</option>
                 <option>10:00</option>
                 <option>11:00</option>
