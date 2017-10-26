@@ -17,7 +17,11 @@ class CreateApptsTable extends Migration
             $table->increments('id');
             $table->string('apptCustomerName', 128);
             $table->dateTime('apptDateTime');
+            $table->integer('apptBarbershopId')->unsigned();
             $table->timestamps();
+
+            $table->index('apptBarbershopId');
+            $table->foreign('apptBarbershopId')->references('id')->on('barbershops');
         });
     }
 

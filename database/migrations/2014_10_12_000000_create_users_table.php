@@ -21,7 +21,8 @@ class CreateUsersTable extends Migration {
 
 			$table->unique('userEmail');
 			$table->index('userBarbershopId');
-		});
+			$table->foreign('userBarbershopId')->references('id')->on('barbershops');
+			});
 	}
 
 
