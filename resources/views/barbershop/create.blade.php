@@ -3,7 +3,7 @@
 @section('barbershop')
     <h4>Schedule An Appointment</h4>
 
-    <form id="needs-validation" method="post" action="/appt" novalidate>
+    <form id="needs-validation" method="post" action="/barbershops" novalidate>
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp"
