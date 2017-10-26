@@ -10,3 +10,5 @@ Route::get('/users/{user}', 'UsersController@show');
 // barbershop routes
 Route::resource('barbershops', 'BarbershopController');
 
+// appt routes
+Route::get('/appt/create', 'ApptController@create');
