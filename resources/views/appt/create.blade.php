@@ -12,6 +12,15 @@
             {{--Please enter your name.--}}
             {{--</div>--}}
         </div>
+        <!-- barbershop selector -->
+        <div class="form-group">
+            <label for="barbershop">Select Barbershop</label>
+            <select class="form-control" id="barbershop">
+                @foreach($barbershops as $barbershop)
+                    <option>{{ $barbershop->barbershopName }}</option>
+                @endforeach
+            </select>
+        </div>
         <!-- appt time selector -->
         <div class="form-group">
             <label for="exampleFormControlSelect2">Choose an appointment time:</label>

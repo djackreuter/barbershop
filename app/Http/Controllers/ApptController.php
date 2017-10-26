@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Appt;
+use App\Barbershop;
 
 class ApptController extends Controller {
 
@@ -13,7 +14,8 @@ class ApptController extends Controller {
   * @return \Illuminate\Http\Response
   **/
     public function create() {
-      return view('appt.create');
+    	$barbershops = Barbershop::all();
+      return view('appt.create', compact('barbershops'));
     }
 
 }
