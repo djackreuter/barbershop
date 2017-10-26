@@ -13,7 +13,7 @@ class CreateApptsTable extends Migration
      */
     public function up()
     {
-        Schema::create('appts', function (Blueprint $table) {
+        Schema::create('appts', function(Blueprint $table) {
             $table->increments('id');
             $table->string('apptCustomerName', 128);
             $table->dateTime('apptDateTime');
@@ -21,8 +21,11 @@ class CreateApptsTable extends Migration
             $table->timestamps();
 
             $table->index('apptBarbershopId');
-            $table->foreign('apptBarbershopId')->references('id')->on('barbershops');
         });
+
+        Schema::table('appts', function($table) {
+			  $table->foreign('apptBarbershopId')->references('id')->on('barbershops');
+		  });
     }
 
     /**
