@@ -22,4 +22,22 @@ class ApptController extends Controller {
       return view('appt.create', compact('barbershops'));
     }
 
+		/**
+		* Store the appointment in the Database
+		*
+		* @return \Illuminate\Http\Response
+		**/
+		public function store() {
+			// create a new appointment using the request data
+			$appt = new Appt;
+			Appt::create([
+				'apptCustomerName' => request('name'),
+				'apptBarbershopId' => request('barbershop'),
+				'apptDateTime' => request('apptTime')
+			]);
+			
+			// redirect
+			return redirect('/');
+		}
+
 }

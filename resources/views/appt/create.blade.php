@@ -3,7 +3,8 @@
 @section('barbershop')
     <h4>Schedule An Appointment</h4>
 
-    <form id="needs-validation" method="post" action="" novalidate>
+    <form id="needs-validation" method="POST" action="/appt" novalidate>
+      {{ csrf_field() }}
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp"
@@ -15,7 +16,7 @@
         <!-- barbershop selector -->
         <div class="form-group">
             <label for="barbershop">Barbershop:</label>
-            <select class="form-control" id="barbershop">
+            <select class="form-control" name="barbershop" id="barbershop">
                 @foreach($barbershops as $barbershop)
                     <option>{{ $barbershop->barbershopName }}</option>
                 @endforeach
@@ -23,8 +24,8 @@
         </div>
         <!-- appt time selector -->
         <div class="form-group">
-            <label for="exampleFormControlSelect2">Choose an appointment time:</label>
-            <select multiple class="form-control" name="appt" required>
+            <label for="apptTime">Choose an appointment time:</label>
+            <select multiple class="form-control" name="apptTime" required>
                 <option>09:00</option>
                 <option>10:00</option>
                 <option>11:00</option>
