@@ -14,11 +14,11 @@ class ApptController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 **/
 	public function create() {
-//    	$barbershops = Barbershop::all();
-		$barbershops = \DB::table('appts')
-			->join('barbershops', 'appts.apptBarbershopId', '=', 'barbershops.id')
-			->select('barbershops.barbershopName')
-			->get();
+   	$barbershops = Barbershop::all();
+		// $barbershops = \DB::table('appts')
+		// 	->join('barbershops', 'appts.apptBarbershopId', '=', 'barbershops.id')
+		// 	->select('barbershops.barbershopName')
+		// 	->get();
       return view('appt.create', compact('barbershops'));
     }
 
