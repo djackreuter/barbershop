@@ -14,7 +14,7 @@
         </div>
         <!-- barbershop selector -->
         <div class="form-group">
-            <label for="barbershop">Select Barbershop</label>
+            <label for="barbershop">Barbershop:</label>
             <select class="form-control" id="barbershop">
                 @foreach($barbershops as $barbershop)
                     <option>{{ $barbershop->barbershopName }}</option>
