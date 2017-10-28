@@ -17,14 +17,14 @@ class CreateApptsTable extends Migration
             $table->increments('id');
             $table->string('apptCustomerName', 128);
             $table->dateTime('apptDateTime');
-            $table->integer('apptBarbershopId')->unsigned();
+            $table->integer('appt_id')->unsigned();
             $table->timestamps();
 
-            $table->index('apptBarbershopId');
+            $table->index('appt_id');
         });
 
         Schema::table('appts', function($table) {
-			  $table->foreign('apptBarbershopId')->references('id')->on('barbershops');
+			  $table->foreign('appt_id')->references('id')->on('barbershops');
 		  });
     }
 
