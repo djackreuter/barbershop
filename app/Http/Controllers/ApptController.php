@@ -32,10 +32,10 @@ class ApptController extends Controller {
 			$appt = new Appt;
 			Appt::create([
 				'apptCustomerName' => request('name'),
-				'apptBarbershopId' => request('barbershop'),
+				'appt_id' => request('barbershop'),
 				'apptDateTime' => request('apptTime')
 			]);
-			
+
 			// redirect
 			return redirect('/');
 		}
