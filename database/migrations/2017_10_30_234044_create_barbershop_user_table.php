@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateApptBarbershopTable extends Migration
+class CreateBarbershopUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateApptBarbershopTable extends Migration
      */
     public function up()
     {
-        Schema::create('appt_barbershop', function (Blueprint $table) {
+        Schema::create('barbershop_user', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('appt_id')->unsigned();
             $table->integer('barbershop_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
-            $table->foreign('appt_id')->references('id')->on('appts');
             $table->foreign('barbershop_id')->references('id')->on('barbershops');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateApptBarbershopTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appt_barbershop');
+        Schema::dropIfExists('barbershop_user');
     }
 }
