@@ -13,19 +13,14 @@ class CreateUsersTable extends Migration {
 	public function up() {
 		Schema::create('users', function (Blueprint $table) {
 			$table->increments('id');
-			$table->integer('user_id')->unsigned();
 			$table->string('userName', 50);
 			$table->string('userEmail', 128);
 			$table->string('userHash', 128)->nullable();
 			$table->string('userSalt', 64)->nullable();
 
 			$table->unique('userEmail');
-			$table->index('user_id');
 			});
 
-		Schema::table('users', function($table) {
-			$table->foreign('user_id')->references('id')->on('barbershops');
-		});
 	}
 
 

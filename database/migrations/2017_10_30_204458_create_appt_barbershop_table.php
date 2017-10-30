@@ -1,10 +1,10 @@
-c<?php
+<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateApptsTable extends Migration
+class CreateApptBarbershopTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateApptsTable extends Migration
      */
     public function up()
     {
-        Schema::create('appts', function(Blueprint $table) {
+        Schema::create('appt_barbershop', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('apptCustomerName', 128);
-            $table->dateTime('apptDateTime');
-            $table->timestamps();
-         });
-
-        
+            $table->integer('appt_id')->unsigned();
+            $table->integer('barbershop_id')->unsigned();
+        });
     }
 
     /**
@@ -30,6 +27,6 @@ class CreateApptsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appts');
+        Schema::dropIfExists('appt_barbershop');
     }
 }
