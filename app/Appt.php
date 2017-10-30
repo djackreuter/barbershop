@@ -8,7 +8,7 @@ class Appt extends Model {
 
   protected $fillable = ['apptCustomerName', 'appt_id', 'apptDateTime'];
 
-    public function barbershop() {
-      return $this->belongsTo('App\Barbershop');
+    public function barbershops() {
+      return $this->belongsToMany('App\Barbershop', 'appts_barbershops');
     }
 }
