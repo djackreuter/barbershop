@@ -40,19 +40,6 @@
                 <option>20:00</option>
             </select>
         </div>
-        <!-- haircut or haircut & shampoo -->
-        <div class="form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
-                       checked>
-                Haircut </label>
-        </div>
-        <div class="form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                Haircut &amp; Shampoo
-            </label>
-        </div>
         <!-- submit -->
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Submit</button>
