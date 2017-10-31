@@ -9,7 +9,4 @@ class Barbershop extends Model {
       return $this->hasMany(Appt::class);
     }
 
-    public function users() {
-    	return $this->belongsToMany('App\User', 'barbershop_user');
-    }
 }
