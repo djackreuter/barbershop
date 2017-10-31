@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Barbershop extends Model {
     public function appts() {
-      return $this->belongsToMany('App\Appt', 'appt_barbershop');
+      return $this->hasMany(Appt::class);
     }
 
     public function users() {

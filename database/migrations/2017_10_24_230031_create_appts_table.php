@@ -15,6 +15,7 @@ class CreateApptsTable extends Migration
     {
         Schema::create('appts', function(Blueprint $table) {
             $table->increments('id');
+            $table->integer('barbershop_id')->unsigned();
             $table->string('apptCustomerName', 128);
             $table->dateTime('apptDateTime');
             $table->timestamps();
