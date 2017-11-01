@@ -18,3 +18,9 @@ nav {
 form button {
 	margin-top: .5rem;
 }
+
+@media (min-width: 800px) {
+	.table {
+		width: 75%;
+	}
+}

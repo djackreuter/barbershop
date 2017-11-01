@@ -48,7 +48,7 @@ class BarbershopController extends Controller
         $barbershop = Barbershop::find($id);
         $appt = Appt::all();
 
-        return view('barbershop.show', compact('barbershop'));
+        return view('barbershop.show', compact('barbershop', 'appt'));
     }
 
     /**
