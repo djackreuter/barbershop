@@ -14,9 +14,8 @@ class ApptController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 **/
 	public function create() {
-   	$appt = Appt::all();
-		
-      return view('appt.create', compact('appt'));
+	$barbershop = Barbershop::all();		
+      return view('appt.create', compact('barbershop'));
     }
 
 	/**
