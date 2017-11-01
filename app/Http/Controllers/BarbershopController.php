@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 // use Illuminate\Http\Request;
 use App\Barbershop;
+use App\Appt;
 
 class BarbershopController extends Controller
 {
@@ -45,6 +46,7 @@ class BarbershopController extends Controller
      */
     public function show($id) {
         $barbershop = Barbershop::find($id);
+        $appt = Appt::all();
 
         return view('barbershop.show', compact('barbershop'));
     }

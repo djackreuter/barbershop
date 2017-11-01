@@ -14,34 +14,31 @@ class ApptController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 **/
 	public function create() {
-   	$barbershops = Barbershop::all();
-		// $barbershops = \DB::table('appts')
-		// 	->join('barbershops', 'appts.apptBarbershopId', '=', 'barbershops.id')
-		// 	->select('barbershops.barbershopName')
-		// 	->get();
-      return view('appt.create', compact('barbershops'));
+   	$appt = Appt::all();
+		
+      return view('appt.create', compact('appt'));
     }
 
-		/**
-		* Store the appointment in the Database
-		*
-		* @return \Illuminate\Http\Response
-		**/
-		public function store() {
-			$this->validate(request(), [
-				'name' => 'required|max:128',
-				'apptDateTime' => 'required'
+	/**
+	* Store the appointment in the Database
+	*
+	* @return \Illuminate\Http\Response
+	**/
+	public function store() {
+		$this->validate(request(), [
+			'name' => 'required|max:128',
+			'apptDateTime' => 'required'
 
-			]);
-			// create a new appointment using the request data
-			Appt::create([
-				'apptCustomerName' => request('name'),
-				'appt_id' => request('barbershop'),
-				'apptDateTime' => request('apptTime')
-			]);
+		]);
+		// create a new appointment using the request data
+		Appt::create([
+			'apptCustomerName' => request('name'),
+			'appt_id' => request('barbershop'),
+			'apptDateTime' => request('apptTime')
+		]);
 
-			// redirect
-			return redirect('/');
-		}
+		// redirect
+		return redirect('/');
+	}
 
 }
