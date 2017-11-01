@@ -11,9 +11,9 @@
 	    		<th>Appointment Time</th>
     		</tr>
     	</thead>
-    	@foreach($appt as $appts)
-			<td>{{ $appts->apptCustomerName }}</td>
-			<td>{{ $appts->apptDateTime }}</td>
+    	@foreach($barbershop->appts as $appt)
+			<td>{{ $appt->apptCustomerName }}</td>
+			<td>{{ $appt->apptDateTime }}</td>
     	@endforeach
     	
     </table>
