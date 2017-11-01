@@ -9,16 +9,6 @@ use App\Barbershop;
 class ApptController extends Controller {
 
 	/**
-	 * Display all appointments 
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function index() {
-		$appts = Appt::all();
-		return view('appt.index', compact('appts'));
-	}
-
-	/**
 	 * Display form to create an appt
 	 *
 	 * @return \Illuminate\Http\Response
