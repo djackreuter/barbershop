@@ -24,7 +24,7 @@ class ApptController extends Controller {
 	*
 	* @return \Illuminate\Http\Response
 	**/
-	public function store(Barbershop $id) {
+	public function store(Barbershop $barbershop) {
 		$this->validate(request(), [
 			'name' => 'required|max:128'
 			// 'apptDateTime' => 'required'
