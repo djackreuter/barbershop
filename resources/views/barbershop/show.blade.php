@@ -47,7 +47,7 @@
     	</thead>
     	@foreach($barbershop->appts as $appt)
 			<td>{{ $appt->apptCustomerName }}</td>
-			<td>{{ $appt->apptDateTime }}</td>
+			<td>{{ $appt->apptTime }}</td>
     	@endforeach
     	
     </table>

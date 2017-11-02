@@ -18,7 +18,7 @@ class CreateBarbershopTable extends Migration {
             $table->string('barbershopName', 128);
             $table->string('barbershopHash', 128)->nullable();
             $table->string('barbershopSalt', 64)->nullable();
-            $table->timestamps();
+            
         });
     }
 
