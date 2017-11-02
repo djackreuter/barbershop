@@ -27,7 +27,7 @@ class ApptController extends Controller {
 		]);
 
 		// redirect
-		return redirect('/');
+		return back();
 	}
 
 }

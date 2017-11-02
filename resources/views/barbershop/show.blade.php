@@ -39,16 +39,19 @@
     </form>
 
     <table class="table table-bordered">
-    	<thead>
+        <thead>
     		<tr>
-	    		<th>Customer Name</th>
-	    		<th>Appointment Time</th>
+	    		<th scope="col">Customer Name</th>
+	    		<th scope="col">Appointment Time</th>
     		</tr>
-    	</thead>
-    	@foreach($barbershop->appts as $appt)
-			<td>{{ $appt->apptCustomerName }}</td>
-			<td>{{ $appt->apptTime }}</td>
-    	@endforeach
-    	
+        </thead>
+        <tbody>
+        	@foreach($barbershop->appts as $appt)
+                <tr>
+                    <td>{{ $appt->apptCustomerName }}</td>
+                    <td>{{ $appt->apptTime }}</td>
+                </tr>
+    		@endforeach
+    	</tbody>
     </table>
 @endsection
