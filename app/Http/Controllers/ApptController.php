@@ -9,17 +9,6 @@ use App\Barbershop;
 class ApptController extends Controller {
 
 	/**
-	 * Display form to create an appt
-	 *
-	 * @return \Illuminate\Http\Response
-	 **/
-	public function create() {
-	$barbershop = Barbershop::all();
-	$appt = Appt::all();		
-      return view('appt.create', compact('barbershop', 'appt'));
-    }
-
-	/**
 	* Store the appointment in the Database
 	*
 	* @return \Illuminate\Http\Response

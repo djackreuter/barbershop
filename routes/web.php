@@ -11,6 +11,4 @@ Route::get('/users/{user}', 'UsersController@show');
 Route::resource('barbershops', 'BarbershopController');
 
 // appt routes
-Route::get('/appt/create', 'ApptController@create');
-
 Route::post('/barbershops/{barbershop}/appt', 'ApptController@store');
