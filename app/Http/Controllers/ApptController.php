@@ -14,8 +14,9 @@ class ApptController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 **/
 	public function create() {
-	$barbershop = Barbershop::all();		
-      return view('appt.create', compact('barbershop'));
+	$barbershop = Barbershop::all();
+	$appt = Appt::all();		
+      return view('appt.create', compact('barbershop', 'appt'));
     }
 
 	/**
@@ -32,7 +33,7 @@ class ApptController extends Controller {
 		// create a new appointment using the request data
 		Appt::create([
 			'apptCustomerName' => request('name'),
-			'appt_id' => request('barbershop'),
+			'barbershop_id' => request('barbershop'),
 			'apptDateTime' => request('apptTime')
 		]);
 
