@@ -5,7 +5,7 @@
     <hr>
     <p>About Us: {{ $barbershop->barbershopBio }}</p>
 
-     <form id="needs-validation" method="POST" action="/appt" novalidate>
+     <form id="needs-validation" method="POST" action="/barbershops/{{ $barbershop->id }}/appt" novalidate>
       {{ csrf_field() }}
         <div class="form-group">
             <label for="name">Name:</label>

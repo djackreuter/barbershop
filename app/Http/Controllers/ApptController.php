@@ -24,7 +24,7 @@ class ApptController extends Controller {
 	*
 	* @return \Illuminate\Http\Response
 	**/
-	public function store(Appt $appt) {
+	public function store(Barbershop $id) {
 		$this->validate(request(), [
 			'name' => 'required|max:128'
 			// 'apptDateTime' => 'required'
@@ -33,7 +33,7 @@ class ApptController extends Controller {
 		// create a new appointment using the request data
 		Appt::create([
 			'apptCustomerName' => request('name'),
-			'barbershop_id' => request('barbershop'),
+			'barbershop_id' => $barbershop->id,
 			'apptDateTime' => request('apptTime')
 		]);
 
