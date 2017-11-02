@@ -8,5 +8,5 @@ class Model extends Eloquent {
 
  	protected $guarded = [];
 
-	protected $fillable = ['apptCustomerName', 'barbershop_id','apptDateTime'];
+	protected $fillable = ['apptCustomerName', 'barbershop_id', 'apptTime'];
 }

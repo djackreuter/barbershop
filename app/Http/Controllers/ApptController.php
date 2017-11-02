@@ -23,7 +23,7 @@ class ApptController extends Controller {
 		Appt::create([
 			'apptCustomerName' => request('name'),
 			'barbershop_id' => $barbershop->id,
-			'apptDateTime' => request('apptTime')
+			'apptTime' => request('apptTime')
 		]);
 
 		// redirect

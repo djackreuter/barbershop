@@ -17,8 +17,7 @@ class CreateApptsTable extends Migration
             $table->increments('id');
             $table->integer('barbershop_id')->unsigned();
             $table->string('apptCustomerName', 128);
-            $table->dateTime('apptDateTime')->nullable();
-            $table->timestamps();
+            $table->time('apptTime');
 
          });
 
