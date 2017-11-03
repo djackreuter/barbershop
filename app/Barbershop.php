@@ -8,5 +8,4 @@ class Barbershop extends Model {
     public function appts() {
       return $this->hasMany(Appt::class);
     }
-
 }
