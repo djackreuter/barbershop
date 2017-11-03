@@ -49,7 +49,7 @@
         	@foreach($barbershop->appts as $appt)
                 <tr>
                     <td>{{ $appt->apptCustomerName }}</td>
-                    <td>{{ $appt->apptTime }}</td>
+                    <td>{{ date('H:i', strtotime($appt->apptTime)) }}</td>
                 </tr>
     		@endforeach
     	</tbody>
