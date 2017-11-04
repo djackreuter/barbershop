@@ -16,4 +16,6 @@ Route::post('/barbershops/{barbershop}/appt', 'ApptController@store');
 // authentication routes
 Route::get('/register', 'RegistrationController@create');
 
+Route::post('/register', 'RegistrationController@store');
+
 Route::get('/login', 'SessionsController@create');

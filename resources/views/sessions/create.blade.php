@@ -8,30 +8,31 @@
 		<!-- name -->
 		<div class="form-group">
 			<label for="name">Barbershop Name</label>
-			<input type="text" class="form-control" placeholder="Name..." required>
+			<input type="text" class="form-control" placeholder="Name..." name="name" required>
 		</div>
 		<!-- email -->
 		<div class="form-group">
 			<label for="email">Barbershop Email</label>
-			<input type="email" class="form-control" placeholder="Email..." required>
+			<input type="email" class="form-control" placeholder="Email..." name="email" required>
 		</div>
+		<!-- password -->
 		<div class="form-group">
 			<label for="password">Create Password</label>
-			<input type="password" class="form-control create-password" required>
+			<input type="password" class="form-control create-password" name="password" required>
 		</div>
 		<div class="form-group">
 			<label for="password">Re-type Password</label>
-			<input type="password" class="form-control create-password" required>
+			<input type="password" class="form-control create-password">
 		</div>
 		<!-- price -->
 		<div class="form-group">
 			<label for="price">How much does a haircut cost?</label>
-			<input type="text" class="form-control" id="enterPrice" placeholder="xx.xx">
+			<input type="number" class="form-control" id="enterPrice" placeholder="xx.xx" name="price" required>
 		</div>
 		<!-- bio -->
 		<div class="form-group">
 			<label for="bio">Tell us about your barbershop</label>
-			<textarea class="form-control" rows="3" placeholder="500 characters max"></textarea>
+			<textarea class="form-control" rows="3" placeholder="500 characters max" name="bio"></textarea>
 		</div>
 		  <!-- submit -->
         <div class="form-group">
