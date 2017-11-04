@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'HomeController@home');
+Route::get('/', 'HomeController@index');
 
 // user routes
 Route::get('/users', 'UsersController@index');
@@ -12,7 +12,3 @@ Route::resource('barbershops', 'BarbershopController');
 
 // appt routes
 Route::post('/barbershops/{barbershop}/appt', 'ApptController@store');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
