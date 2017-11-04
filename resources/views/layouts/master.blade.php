@@ -26,35 +26,16 @@
     </head>
     <body>
         <!-- navbar -->
-    @include('layouts.nav')
+        @include('layouts.nav')
 
-    <!-- homepage -->
-    @yield('home')
-
-    <!-- loads users view -->
+        <!-- homepage -->
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    @yield('users')
-                </div><!-- /.col -->
-            </div><!-- /.row -->
+            @yield('home')
         </div><!-- /.container -->
 
-        <!-- loads barbershop view -->
+        <!-- loads views -->
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    @yield('barbershop')
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    @yield('appt')
-                </div><!-- /.col -->
-            </div><!-- /.row -->
+            @yield('content')
         </div><!-- /.container -->
 
         <!-- footer -->

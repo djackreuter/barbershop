@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('barbershop')
+@section('content')
     <h1>{{ $barbershop->barbershopName }}</h1>
     <hr>
     <p>About Us: {{ $barbershop->barbershopBio }}</p>

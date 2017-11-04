@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('users')
+@section('content')
   <ul>
       <li>User Id: {{ $user->id }}</li>
       <li>User Name: {{ $user->userName }}</li>

@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('home')
-    <div class="container">
         <h1>Welcome to the Barbershop App!</h1>
     </div><!-- /.container -->
     <div class="container">
@@ -25,7 +24,6 @@
                     helvetica adaptogen.</p>
             </div><!-- /.col -->
         </div><!-- /.row -->
-    </div><!-- /.container -->
     @endsection
 
 

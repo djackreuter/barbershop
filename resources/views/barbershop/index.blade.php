@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('barbershop')
+@section('content')
     <h1>Barbershops</h1>
 
     <ul>
