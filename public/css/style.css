@@ -23,6 +23,10 @@ form button {
 	width: 10%;
 }
 
+.create-password {
+	width: 20%;
+}
+
 @media (min-width: 800px) {
 	.table {
 		width: 75%;

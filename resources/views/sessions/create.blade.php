@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-	<form>
+<h1>Register Your Barbershop!</h1>
+<hr>
+	<form method="POST" action="/register" novalidate>
 		{{ csrf_field() }}
 		<!-- name -->
 		<div class="form-group">
@@ -12,6 +14,14 @@
 		<div class="form-group">
 			<label for="email">Barbershop Email</label>
 			<input type="email" class="form-control" placeholder="Email..." required>
+		</div>
+		<div class="form-group">
+			<label for="password">Create Password</label>
+			<input type="password" class="form-control create-password" required>
+		</div>
+		<div class="form-group">
+			<label for="password">Re-type Password</label>
+			<input type="password" class="form-control create-password" required>
 		</div>
 		<!-- price -->
 		<div class="form-group">
