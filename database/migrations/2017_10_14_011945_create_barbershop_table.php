@@ -14,9 +14,10 @@ class CreateBarbershopTable extends Migration {
     {
         Schema::create('barbershops', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('barbershopBio', 500)->nullable();
             $table->string('barbershopName', 128);
+            $table->string('barbershopEmail', 128);
             $table->decimal('barbershopPrice', 4, 2)->nullable();
+            $table->string('barbershopBio', 500)->nullable();
             $table->string('barbershopHash', 128)->nullable();
             $table->string('barbershopSalt', 64)->nullable();
             
