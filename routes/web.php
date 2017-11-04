@@ -12,3 +12,8 @@ Route::resource('barbershops', 'BarbershopController');
 
 // appt routes
 Route::post('/barbershops/{barbershop}/appt', 'ApptController@store');
+
+// authentication routes
+Route::get('/register', 'RegistrationController@create');
+
+Route::get('/login', 'SessionsController@create');
