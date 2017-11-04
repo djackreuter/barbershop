@@ -3,6 +3,7 @@
 @section('content')
     <h1>{{ $barbershop->barbershopName }}</h1>
     <hr>
+    <p>Haircut: ${{ $barbershop->barbershopPrice }}</p>
     <p>About Us: {{ $barbershop->barbershopBio }}</p>
 
      <form id="needs-validation" method="POST" action="/barbershops/{{ $barbershop->id }}/appt" novalidate>

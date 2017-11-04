@@ -16,6 +16,7 @@ class CreateBarbershopTable extends Migration {
             $table->increments('id');
             $table->string('barbershopBio', 500)->nullable();
             $table->string('barbershopName', 128);
+            $table->decimal('barbershopPrice', 4, 2)->nullable();
             $table->string('barbershopHash', 128)->nullable();
             $table->string('barbershopSalt', 64)->nullable();
             
