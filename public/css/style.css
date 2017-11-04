@@ -19,6 +19,10 @@ form button {
 	margin-top: .5rem;
 }
 
+#enterPrice {
+	width: 10%;
+}
+
 @media (min-width: 800px) {
 	.table {
 		width: 75%;
