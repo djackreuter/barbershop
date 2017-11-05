@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'barbershops', // from users
     ],
 
     /*
@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'barbershops',  // from users
         ],
 
         'api' => [
@@ -65,9 +65,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'barbershops' => [  // from users
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Barbershop::class,  // from User
         ],
 
         // 'users' => [
@@ -92,8 +92,8 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'barbershops' => [  // from users
+            'provider' => 'barbershops',  // from users
             'table' => 'password_resets',
             'expire' => 60,
         ],
