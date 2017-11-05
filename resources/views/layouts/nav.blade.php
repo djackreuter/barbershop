@@ -23,6 +23,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="/register">Register</a>
             </li>
-        </ul>
+            @if(Auth::check())
+            <li class="nav-item">
+                <a class="nav-link" href="/">{{ Auth::user()->barbershopName }}</a>
+            </li>
+            @endif
     </div>
 </nav>

@@ -20,9 +20,10 @@
 			<label for="password">Create Password</label>
 			<input type="password" class="form-control create-password" name="password" required>
 		</div>
+		<!-- password confirm -->
 		<div class="form-group">
-			<label for="password">Re-type Password</label>
-			<input type="password" class="form-control create-password">
+			<label for="password_confirmation">Re-type Password</label>
+			<input type="password" class="form-control create-password" name="password_confirmation" required>
 		</div>
 		<!-- price -->
 		<div class="form-group">
