@@ -16,11 +16,10 @@ class CreateBarbershopTable extends Migration {
             $table->increments('id');
             $table->string('barbershopName', 128);
             $table->string('barbershopEmail', 128);
-            $table->string('barbershopPassword', 30)->nullable();
+            $table->string('barbershopPassword', 60)->nullable();
             $table->decimal('barbershopPrice', 4, 2)->nullable();
             $table->string('barbershopBio', 500)->nullable();
-            $table->string('barbershopHash', 128)->nullable();
-            $table->string('barbershopSalt', 64)->nullable();
+            $table->string('remember_token', 100)->nullable();
 
             $table->unique('barbershopEmail');
             $table->unique('barbershopName');
