@@ -9,7 +9,7 @@ use App\Barbershop;
 class RegistrationController extends Controller {
 
     public function create() {
-    	return view('sessions.create');
+    	return view('registration.create');
     }
 
     public function store() {
