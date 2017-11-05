@@ -2,6 +2,7 @@
 
 @section('home')
         <h1>Welcome to the Barbershop App!</h1>
+        <hr>
     </div><!-- /.container -->
     <div class="container">
         <div class="row">

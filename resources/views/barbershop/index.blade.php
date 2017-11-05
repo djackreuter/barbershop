@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Barbershops</h1>
-
+    <hr>
     <ul>
         @foreach($barbershops as $barbershop)
             <li>
