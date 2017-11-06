@@ -26,8 +26,15 @@
     </head>
     <body>
         <!-- navbar -->
-        @include('layouts.nav')
+        @if (Auth::check())
 
+            @include('layouts.navlogged')
+
+        @else
+
+            @include('layouts.nav')
+
+        @endif
         <!-- homepage -->
         <div class="container">
             @yield('home')

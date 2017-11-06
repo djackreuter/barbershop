@@ -18,10 +18,10 @@
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/">{{ Auth::user()->barbershopName }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/register">Register</a>
+                <a class="nav-link" href="/logout">Logout</a>
             </li>
         </ul>
     </div>
