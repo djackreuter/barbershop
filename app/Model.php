@@ -24,6 +24,7 @@ class Model extends Eloquent implements Authenticatable {
 	];
 
 	protected $hidden = [
-		'remember_token'
+		'remember_token',
+		'barbershopPassword'
 	];
 }
