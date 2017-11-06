@@ -25,7 +25,7 @@ class RegistrationController extends Controller {
     	$barbershop = Barbershop::create([
     		'barbershopName' => request('name'),
     		'barbershopEmail' => request('email'),
-    		'barbershopPassword' => request('password'),
+    		'barbershopPassword' => bcrypt(request('password')),
     		'barbershopPrice' => request('price'),
     		'barbershopBio' => request('bio')
     	]);

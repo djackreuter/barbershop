@@ -17,9 +17,13 @@ class Model extends Eloquent implements Authenticatable {
 		'barbershop_id',
 		'apptTime',
 		'barbershopName',
+		'barbershopPassword',
 		'barbershopEmail',
-		'barbershopPassowrd',
 		'barbershopPrice',
 		'barbershopBio'
+	];
+
+	protected $hidden = [
+		'remember_token'
 	];
 }
