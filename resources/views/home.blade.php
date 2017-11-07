@@ -4,7 +4,7 @@
         <h1>Welcome to the Barbershop App!</h1>
         <hr>
     </div><!-- /.container -->
-    <div class="container">
+    <div class="container home">
         <div class="row">
             <div class="col">
                 <p>Tumeric chicharrones synth ramps keffiyeh man bun. Jean shorts marfa enamel pin, subway tile
