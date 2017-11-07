@@ -50,8 +50,25 @@ form button {
 	width: 20%;
 }
 
+.login {
+	width: 50%;
+}
+
+.card {
+	padding: 2rem;
+	background-color: #f8f9fa;
+}
+
+
+/* if greater than 800px */
 @media (min-width: 800px) {
 	.table {
 		width: 75%;
+	}
+}
+
+@media (min-width: 992px) {
+	.login {
+		width: 35%;
 	}
 }
