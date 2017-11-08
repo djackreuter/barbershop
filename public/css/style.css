@@ -71,4 +71,7 @@ form button {
 	.login {
 		width: 35%;
 	}
+	.regform {
+		width: 50%;
+	}
 }

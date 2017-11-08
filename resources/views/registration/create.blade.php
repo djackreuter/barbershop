@@ -3,17 +3,18 @@
 @section('content')
 <h1>Register Your Barbershop!</h1>
 <hr>
+<div class="card">
 	<form method="POST" action="/register" novalidate>
 		{{ csrf_field() }}
 		<!-- name -->
 		<div class="form-group">
 			<label for="name">Barbershop Name</label>
-			<input type="text" class="form-control" placeholder="Name..." name="name" required>
+			<input type="text" class="form-control regform" placeholder="Name..." name="name" required>
 		</div>
 		<!-- email -->
 		<div class="form-group">
 			<label for="email">Barbershop Email</label>
-			<input type="email" class="form-control" placeholder="Email..." name="email" required>
+			<input type="email" class="form-control regform" placeholder="Email..." name="email" required>
 		</div>
 		<!-- password -->
 		<div class="form-group">
@@ -33,7 +34,7 @@
 		<!-- bio -->
 		<div class="form-group">
 			<label for="bio">Tell us about your barbershop</label>
-			<textarea class="form-control" rows="3" placeholder="500 characters max" name="bio"></textarea>
+			<textarea class="form-control regform" rows="3" placeholder="500 characters max" name="bio"></textarea>
 		</div>
 		  <!-- submit -->
         <div class="form-group">
@@ -42,4 +43,5 @@
 
         @include('layouts.errors')
 	</form>
+</div>
 @endsection
