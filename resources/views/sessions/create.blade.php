@@ -5,7 +5,7 @@
 	<hr>
 	<div class="login">
 		<div class="card">
-			<form action="POST" action="/sessions">
+			<form action="POST" action="/login">
 				{{ csrf_field() }}
 
 				<div class="form-group">
