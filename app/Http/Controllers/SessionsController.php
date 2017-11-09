@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\Hash;
+use Apt\Barbershop;
+
+use Illuminate\Support\Facades\Auth;
 
 class SessionsController extends Controller {
 
@@ -26,15 +28,15 @@ class SessionsController extends Controller {
      * 
      */
     public function store() {
-        if(!auth()->attempt([
-            'barbershopName' => request('name'),
-            'barbershopPassword' => Hash::check(request('password'))])) {
-                return redirect('/users');
-            }
+        if(! Auth::attempt(request(['barbershopEmail', 'password']))) {
+            return back()->withErrors([
+                'message' => 'Email or assword is incorrect'
+            ]);
+        }
         return redirect('/');
      }
 
-    /**
+     /**
      * log the user out of the session
      * 
      */
