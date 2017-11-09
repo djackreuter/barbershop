@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Auth\Authenticatable as AuthenticableTrait;
+use Illuminate\Support\Facades\Hash;
 
 class Model extends Eloquent implements Authenticatable {
 

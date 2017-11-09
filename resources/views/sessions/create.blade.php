@@ -5,7 +5,7 @@
 	<hr>
 	<div class="login">
 		<div class="card">
-			<form method="POST" action="/login">
+			<form method="POST" action="/login" novalidate>
 				{{ csrf_field() }}
 
 				<div class="form-group">
