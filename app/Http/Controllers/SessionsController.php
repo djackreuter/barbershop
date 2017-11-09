@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Hash;
+
 class SessionsController extends Controller {
 
     public function __construct() {
@@ -25,12 +27,12 @@ class SessionsController extends Controller {
      */
     public function store() {
         if(!auth()->attempt([
-            'barbershopEmail' => request('email'),
-            'barbershopPassword' => request('password')])) {
-                return back();
-        }
+            'barbershopName' => request('name'),
+            'barbershopPassword' => Hash::check(request('password'))])) {
+                return redirect('/users');
+            }
         return redirect('/');
-    }
+     }
 
     /**
      * log the user out of the session

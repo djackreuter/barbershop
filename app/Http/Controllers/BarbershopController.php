@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Barbershop;
-use App\Appt;
+use App\ {
+    Appt,
+    Barbershop
+};
+
 
 class BarbershopController extends Controller
 {
