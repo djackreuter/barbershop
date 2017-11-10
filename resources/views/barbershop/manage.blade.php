@@ -1,11 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-    <table class="table table-bordered">
+<h1>Manage Appointments</h1>
+<hr>
+    <table class="table table-hover table-dark">
             <thead>
                 <tr>
                     <th scope="col">Customer Name</th>
                     <th scope="col">Appointment Time</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -13,6 +16,7 @@
                     <tr>
                         <td>{{ $appt->apptCustomerName }}</td>
                         <td>{{ date('H:i', strtotime($appt->apptTime)) }}</td>
+                        <td><a href="#">x</a></td>
                     </tr>
                 @endforeach
             </tbody>
