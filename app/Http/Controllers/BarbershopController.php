@@ -50,7 +50,11 @@ class BarbershopController extends Controller
         $barbershop = Barbershop::find($id);
         $appt = Appt::all();
 
-        return view('barbershop.show', compact('barbershop', 'appt'));
+        $sorting = Appt::selectRaw('apptCustomerName, apptTime')
+            ->orderByRaw('apptTime ASC')
+            ->get();
+
+        return view('barbershop.show', compact('barbershop', 'appt', 'sorting'));
     }
 
     /**

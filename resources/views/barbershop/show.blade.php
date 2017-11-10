@@ -47,12 +47,18 @@
     		</tr>
         </thead>
         <tbody>
-        	@foreach($barbershop->appts as $appt)
+            @foreach($sorting as $time)
+                <tr>
+                    <td>{{ $time->apptCustomerName }}</td>
+                    <td>{{ date('H:i', strtotime($time->apptTime)) }}</td>
+                </tr>
+            @endforeach
+        	<!-- @foreach($barbershop->appts as $appt)
                 <tr>
                     <td>{{ $appt->apptCustomerName }}</td>
                     <td>{{ date('H:i', strtotime($appt->apptTime)) }}</td>
                 </tr>
-    		@endforeach
+    		@endforeach -->
     	</tbody>
     </table>
 @endsection
