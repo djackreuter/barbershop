@@ -12,10 +12,10 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($barbershop->appts as $appt)
+                @foreach($timeSort as $time)
                     <tr>
-                        <td>{{ $appt->apptCustomerName }}</td>
-                        <td>{{ date('H:i', strtotime($appt->apptTime)) }}</td>
+                        <td>{{ $time->apptCustomerName }}</td>
+                        <td>{{ date('H:i', strtotime($time->apptTime)) }}</td>
                         <td><a href="#">x</a></td>
                     </tr>
                 @endforeach
