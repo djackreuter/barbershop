@@ -30,4 +30,14 @@ class ApptController extends Controller {
 		return back();
 	}
 
+	/**
+	 * Delete the appt from the database
+	 * 
+	 * @return \Illuminate\Http\Response
+	 */
+	public function destroy(Barbershop $barbershop) {
+
+		return view('barbershop.manage');
+	}
+
 }
