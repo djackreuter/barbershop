@@ -18,7 +18,7 @@
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="/">{{ Auth::user()->barbershopName }}</a>
+                <a class="nav-link" href="/barbershops/{{ $barbershop->id }}/manage">{{ Auth::user()->barbershopName }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout">Logout</a>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Appt;
-use App\Barbershop;
+use App\ {
+	Appt,
+	Barbershop
+};
 
 class ApptController extends Controller {
 
@@ -35,9 +37,11 @@ class ApptController extends Controller {
 	 * 
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy(Barbershop $barbershop) {
+	public function destroy($id) {
+		$barbershop = Barbershop::find($id);
+		$appt = Appt::all();
 
-		return view('barbershop.manage');
+		return view('barbershop.manage', compact('barbershop', 'appt'));
 	}
 
 }
