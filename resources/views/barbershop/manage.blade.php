@@ -3,20 +3,20 @@
 @section('content')
 <h1>Manage Appointments</h1>
 <hr>
-    <table class="table table-hover table-dark">
+    <table class="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Appointment Time</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col" class="authTable">Customer Name</th>
+                    <th scope="col" class="authTable">Appointment Time</th>
+                    <th scope="col" class="authTable">Delete</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($timeSort as $time)
                     <tr>
-                        <td>{{ $time->apptCustomerName }}</td>
-                        <td>{{ date('H:i', strtotime($time->apptTime)) }}</td>
-                        <td><a href="#">x</a></td>
+                        <td class="authTable">{{ $time->apptCustomerName }}</td>
+                        <td class="authTable">{{ date('H:i', strtotime($time->apptTime)) }}</td>
+                        <td class="authTable delete-appt"><a href="#">x</a></td>
                     </tr>
                 @endforeach
             </tbody>

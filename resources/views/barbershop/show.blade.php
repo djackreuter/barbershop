@@ -39,7 +39,7 @@
         @include('layouts.errors')
     </form>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
         <thead>
     		<tr>
 	    		<th scope="col">Customer Name</th>
