@@ -17,7 +17,7 @@
                         <td class="authTable">{{ $appt->apptCustomerName }}</td>
                         <td class="authTable">{{ date('H:i', strtotime($appt->apptTime)) }}</td>
                         <td class="authTable">{!! Form::open(['action' => ['ApptController@destroy', $appt->id], 'method' => 'delete', ]) !!}
-                            {{ Form::submit('X', ['class' => 'btn btn-danger']) }}
+                            {{ Form::submit('X', ['class' => 'btn btn-danger delete-appt']) }}
                             {!! Form::close() !!}
                         </td>
                     </tr>
