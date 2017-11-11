@@ -13,7 +13,9 @@ Route::resource('barbershops', 'BarbershopController');
 // appt routes
 Route::post('/barbershops/{barbershop}/appt', 'ApptController@store');
 
-Route::get('/barbershops/{barbershop}/manage', 'ApptController@destroy');
+Route::get('/barbershops/{barbershop}/manage', 'ApptController@show');
+
+Route::get('/delete', 'ApptController@destroy');
 
 // authentication routes
 Route::get('/register', 'RegistrationController@create');

@@ -37,11 +37,18 @@ class ApptController extends Controller {
 	 * 
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id) {
+	public function show($id) {
 		$barbershop = Barbershop::find($id);
 		$appt = Appt::all();
 
 		return view('barbershop.manage', compact('barbershop', 'appt'));
+	}
+
+	public function destroy($id) {
+		$appt = Appt::find($id);
+		$appt->delete();
+
+		return back();
 	}
 
 }
