@@ -12,12 +12,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($timeSort as $time)
+                @foreach($timeSort as $appt)
                     <tr>
-                        <td class="authTable">{{ $time->apptCustomerName }}</td>
-                        <td class="authTable">{{ date('H:i', strtotime($time->apptTime)) }}</td>
-                        <td class="authTable delete-appt">{!! Form::open(['method' => 'delete', 'action' => ['ApptController@destroy', $appt->id ]]) !!}
-                            {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                        <td class="authTable">{{ $appt->apptCustomerName }}</td>
+                        <td class="authTable">{{ date('H:i', strtotime($appt->apptTime)) }}</td>
+                        <td class="authTable">{!! Form::open(['action' => ['ApptController@destroy', $appt->id], 'method' => 'delete', ]) !!}
+                            {{ Form::submit('X', ['class' => 'btn btn-danger']) }}
                             {!! Form::close() !!}
                         </td>
                     </tr>

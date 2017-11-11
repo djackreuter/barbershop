@@ -63,17 +63,6 @@ form button {
 	text-align: center;
 }
 
-.delete-appt {
-	text-transform: uppercase;
-}
-
-.delete-appt a:hover {
-	color: red;
-	text-decoration: none;
-	font-weight: bold;
-	
-}
-
 /* if greater than 800px */
 @media (min-width: 800px) {
 	.table {
