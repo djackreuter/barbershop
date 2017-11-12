@@ -10,9 +10,9 @@ class Appt extends Model {
       return $this->belongsTo(Barbershop::class);
     }
 
-    public static function orderByTime() {
-      return static::selectRaw('apptCustomerName, apptTime')
-      ->orderByRaw('apptTime ASC')
-      ->get();
-    }
+    // public static function orderByTime() {
+    //   return static::selectRaw('apptCustomerName, apptTime')
+    //   ->orderByRaw('apptTime ASC')
+    //   ->get();
+    // }
 }

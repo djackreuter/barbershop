@@ -12,11 +12,11 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($timeSort as $appt)
+                @foreach($barbershop->appts as $appt)
                     <tr>
                         <td class="authTable">{{ $appt->apptCustomerName }}</td>
                         <td class="authTable">{{ date('H:i', strtotime($appt->apptTime)) }}</td>
-                        <td class="authTable">{!! Form::open(['action' => ['ApptController@destroy', $appt->id], 'method' => 'delete', ]) !!}
+                        <td class="authTable">{!! Form::open(['route' => ['delete.appt', $appt->id], 'method' => 'delete' ]) !!}
                             {{ Form::submit('X', ['class' => 'btn btn-danger delete-appt']) }}
                             {!! Form::close() !!}
                         </td>

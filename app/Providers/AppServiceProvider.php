@@ -13,9 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer(['barbershop.manage', 'barbershop.show'], function($view) {
-            $view->with('timeSort', \App\Appt::orderByTime());
-        });
+        // view()->composer(['barbershop.manage', 'barbershop.show'], function($view) {
+        //     $view->with('timeSort', \App\Appt::orderByTime());
+        // });
     }
 
     /**
