@@ -15,7 +15,7 @@ Route::post('/barbershops/{barbershop}/appt', 'ApptController@store');
 
 Route::get('/barbershops/{barbershop}/manage', 'ApptController@show');
 
-Route::delete('/delete{id}', 'ApptController@destroy');
+Route::delete('/delete/{id}', ['uses' => 'ApptController@destroy', 'as' => 'delete.appt']);
 
 // authentication routes
 Route::get('/register', 'RegistrationController@create');
