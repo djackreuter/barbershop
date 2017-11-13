@@ -10,6 +10,11 @@ use App\ {
 
 class ApptController extends Controller {
 
+	// insure that only logged in barbershops can access manage page
+	public function __construct() {
+		$this->middleware('auth', ['except' => 'store']);
+	}
+
 	/**
 	* Store the appointment in the Database
 	*
