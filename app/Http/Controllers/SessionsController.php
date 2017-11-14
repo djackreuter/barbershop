@@ -30,7 +30,7 @@ class SessionsController extends Controller {
     public function store() {
         if(! Auth::attempt(request(['barbershopEmail', 'password']))) {
             return back()->withErrors([
-                'message' => 'Email or assword is incorrect'
+                'message' => 'Email or password is incorrect'
             ]);
         }
         return redirect('/');
