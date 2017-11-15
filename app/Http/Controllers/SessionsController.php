@@ -23,12 +23,17 @@ class SessionsController extends Controller {
         return view('sessions.create');
     }
 
-    /**
-     * authenticate the user
-     * 
+     /**
+     * Authenticate the barbershop
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
-    public function store() {
-        if(! Auth::attempt(request(['barbershopEmail', 'password']))) {
+    public function store(Request $request) {
+        $barbershopEmail = $request->input('email');
+        $password = $request->input('password');
+
+        if(! Auth::attempt(['barbershopEmail' => $barbershopEmail, $password => 'password'])) {
             return back()->withErrors([
                 'message' => 'Email or password is incorrect'
             ]);
