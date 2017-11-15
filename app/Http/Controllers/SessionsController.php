@@ -33,7 +33,7 @@ class SessionsController extends Controller {
         $barbershopEmail = $request->input('email');
         $password = $request->input('password');
 
-        if(! Auth::attempt(['barbershopEmail' => $barbershopEmail, $password => 'password'])) {
+        if(! Auth::attempt(['barbershopEmail' => $barbershopEmail, 'password' => $password])) {
             return back()->withErrors([
                 'message' => 'Email or password is incorrect'
             ]);
