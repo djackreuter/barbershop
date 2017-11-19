@@ -22,3 +22,10 @@ Route::get('/login', [ 'as' => 'login', 'uses' => 'SessionsController@create']);
 Route::post('/login', 'SessionsController@store');
 
 Route::get('/logout', 'SessionsController@destroy');
+
+// Middleware routes for Barbershop Auth
+Route::group(['middleware' => 'BarbershopAuth'], function() {
+    Route::get('barbershops/{id}', function() {
+
+    });
+});
