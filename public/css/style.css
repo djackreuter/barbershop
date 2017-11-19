@@ -8,6 +8,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-color: snow;
 }
 .footer {
   position: absolute;
@@ -15,6 +16,19 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
+}
+
+.shops-list {
+	color: black;
+}
+
+.shops-list:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.image {
+	width: 70%;
 }
 
 .footer-style {
@@ -32,7 +46,6 @@ ul {
 
 footer .container-fluid {
 	margin-top: 3rem;
-	background-color: #f8f9fa;
 }
 
 footer p {
