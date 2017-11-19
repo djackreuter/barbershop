@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class BarbershopAuth
 {
@@ -15,6 +16,11 @@ class BarbershopAuth
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        $authId = $request->route('id');
+
+        if(Auth::user()->id == $authId) {
+            return $next($request);            
+        }
+        return redirect('/');
     }
 }
