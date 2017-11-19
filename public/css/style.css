@@ -17,6 +17,11 @@ body {
   height: 60px;
 }
 
+.footer-style {
+	background-color: #343A40;
+  	color: #FFFFFF;
+}
+
 .home {
 	text-align: justify;
 }
