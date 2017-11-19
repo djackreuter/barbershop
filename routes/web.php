@@ -8,7 +8,7 @@ Route::resource('barbershops', 'BarbershopController');
 // appt routes
 Route::post('/barbershops/{barbershop}/appt', 'ApptController@store');
 
-Route::get('/barbershops/{barbershop}/manage', 'ApptController@show');
+// Route::get('/barbershops/{barbershop}/manage', 'ApptController@show');
 
 Route::delete('/delete/{id}', ['uses' => 'ApptController@destroy', 'as' => 'delete.appt']);
 
@@ -24,8 +24,6 @@ Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
 
 // Middleware routes for Barbershop Auth
-Route::group(['middleware' => 'BarbershopAuth'], function() {
-    Route::get('barbershops/{id}', function() {
-
-    });
+Route::group(['middleware' => ['BarbershopAuth']], function() {
+    Route::get('/barbershops/{barbershop}/manage', 'ApptController@show');
 });
