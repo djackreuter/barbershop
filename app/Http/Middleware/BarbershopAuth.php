@@ -16,7 +16,7 @@ class BarbershopAuth
      */
     public function handle($request, Closure $next)
     {
-        $authId = $request->route('id');
+        $authId = $request->route('barbershop');
 
         if(Auth::user()->id == $authId) {
             return $next($request);            
